@@ -68,7 +68,8 @@ public class RobotContainer {
      * should look something like: drivetrain.setDefaultCommand(drivetrainDefaultCommand);
      */
 
-     Command drivetrainDefaultCommand = null;
+     Command drivetrainDefaultCommand = new DrivetrainTankDrive(drivetrain, m_driverController);
+     drivetrain.setDefaultCommand(drivetrainDefaultCommand);
 
   }
 

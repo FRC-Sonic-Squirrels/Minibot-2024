@@ -63,13 +63,17 @@ public class DrivetrainTankDrive extends CommandBase {
      * code in this class to try to gain a deeper understanding for whats going on. Its okay 
      * if you are unsure about what some things mean. 
      */
+
+     double leftSpeed = controller.getLeftY();
+     double rightSpeed = controller.getRightY();
+     drivetrain.tankDrive(leftSpeed, rightSpeed);
   }
 
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
     // TODO 5: following line should be uncommented to make sure the robot stops when the command ends
-    // drivetrain.tankDrive(0.0, 0.0);
+    drivetrain.tankDrive(0.0, 0.0);
   }
 
   // Returns true when the command should end.
